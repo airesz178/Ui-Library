@@ -1,3 +1,4 @@
+--orion ui
 local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
 local RunService = game:GetService("RunService")
@@ -650,7 +651,7 @@ function OrionLib:MakeWindow(WindowConfig)
 		UIHidden = true
 		OrionLib:MakeNotification({
 			Name = "Interface Hidden",
-			Content = "Tap = to reopen the interface",
+			Content = "Tap Del to reopen the interface",
 			Time = 5
 		})
 		WindowConfig.CloseCallback()
