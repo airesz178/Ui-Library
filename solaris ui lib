@@ -1,8 +1,5 @@
---https://raw.githubusercontent.com/Stebulous/solaris-ui-lib/main/source.lua
-
--- This User Interface Library is brought to you by Solaris Software.
 local Solaris = Instance.new("ScreenGui")
-Solaris.Name = "dosage's solaris gui"
+Solaris.Name = "solaris gui"
 Solaris.Parent = game.CoreGui
 Solaris.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
@@ -1217,7 +1214,7 @@ function SolarisLib:New(Config)
                 
 
                 BindFrame.InputEnded:Connect(function(Input)
-                    if Input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+                    if Input.UserInputType == Enum.UserInputType.MouseButton1 or Input.UserInputType == Enum.UserInputType.Touch then
                         if Bind.Binding then return end
                         Bind.Binding = true
                         BindFrame.BText.Text = "..."
