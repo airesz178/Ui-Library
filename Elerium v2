@@ -891,7 +891,7 @@ function library:AddWindow(title, options)
         end)
         local Held = false
         UIS.InputBegan:Connect(function(inputObject)
-            if inputObject.UserInputType == Enum.UserInputType.MouseButton1 then
+            if inputObject.UserInputType == Enum.UserInputType.MouseButton1 or inputObject.UserInputType == Enum.UserInputType.Touch then
                 Held = true
                 spawn(function()
                     if Entered and Resizer.Active and options.can_resize then
@@ -916,7 +916,7 @@ function library:AddWindow(title, options)
             end
         end)
         UIS.InputEnded:Connect(function(inputObject)
-            if inputObject.UserInputType == Enum.UserInputType.MouseButton1 then
+            if inputObject.UserInputType == Enum.UserInputType.MouseButton1 or inputObject.UserInputType == Enum.UserInputType.Touch then
                 Held = false
             end
         end)
@@ -1115,7 +1115,7 @@ function library:AddWindow(title, options)
                             end)
                             local Held = false
                             UIS.InputBegan:Connect(function(inputObject)
-                                if inputObject.UserInputType == Enum.UserInputType.MouseButton1 then
+                                if inputObject.UserInputType == Enum.UserInputType.MouseButton1 or inputObject.UserInputType == Enum.UserInputType.Touch then
                                     Held = true
                                     spawn(function()
                                         if Entered and not slider_options.readonly then
@@ -1147,7 +1147,7 @@ function library:AddWindow(title, options)
                                 end
                             end)
                             UIS.InputEnded:Connect(function(inputObject)
-                                if inputObject.UserInputType == Enum.UserInputType.MouseButton1 then
+                                if inputObject.UserInputType == Enum.UserInputType.MouseButton1 or inputObject.UserInputType == Enum.UserInputType.Touch then
                                     Held = false
                                 end
                             end)
@@ -1344,7 +1344,7 @@ function library:AddWindow(title, options)
                             saturation_indicator.ZIndex = saturation_indicator.ZIndex + (windows * 10)
                             local Held = false
                             UIS.InputBegan:Connect(function(inputObject)
-                                if inputObject.UserInputType == Enum.UserInputType.MouseButton1 then
+                                if inputObject.UserInputType == Enum.UserInputType.MouseButton1 or inputObject.UserInputType == Enum.UserInputType.Touch then
                                     Held = true
                                     spawn(function()
                                         while Held and Entered1 and (not dropdown_open) do -- Palette
@@ -1370,7 +1370,7 @@ function library:AddWindow(title, options)
                                 end
                             end)
                             UIS.InputEnded:Connect(function(inputObject)
-                                if inputObject.UserInputType == Enum.UserInputType.MouseButton1 then
+                                if inputObject.UserInputType == Enum.UserInputType.MouseButton1 or inputObject.UserInputType == Enum.UserInputType.Touch then
                                     Held = false
                                 end
                             end)
